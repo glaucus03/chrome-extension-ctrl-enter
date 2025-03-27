@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gemini Ctrl+Enter 設定</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    .site-list {
+      margin-bottom: 20px;
+    }
+    .site-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    .site-url {
+      flex-grow: 1;
+      padding: 5px;
+    }
+    .site-enabled {
+      margin: 0 10px;
+    }
+    .site-remove {
+      background-color: #f44336;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .add-site {
+      margin-top: 20px;
+    }
+    .add-site input {
+      padding: 8px;
+      margin-right: 10px;
+      width: 300px;
+    }
+    .add-site button, .save-button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .status {
+      margin-top: 20px;
+      color: green;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Gemini Ctrl+Enter 設定</h1>
+  
+  <p>以下のサイトで「Enterで改行、Ctrl+Enterで送信」の動作が有効になります</p>
+  
+  <div class="site-list" id="siteList">
+    <!-- サイトリストがJavaScriptで動的に生成される -->
+  </div>
+  
+  <div class="add-site">
+    <input type="text" id="newSiteUrl" placeholder="example.com">
+    <button id="addSite">サイトを追加</button>
+  </div>
+  
+  <button class="save-button" id="saveSettings">設定を保存</button>
+  
+  <div class="status" id="statusMessage">設定が保存されました</div>
+  
+  <script src="js/options.js"></script>
+</body>
+</html>

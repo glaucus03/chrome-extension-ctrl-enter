@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Gemini Ctrl+Enter",
+  "version": "1.0",
+  "description": "geminiでEnterで改行、Ctrl+Enterで送信する拡張機能",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://gemini.google.com/*"],
+      "js": ["src/js/content.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "options_page": "src/options.html",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
